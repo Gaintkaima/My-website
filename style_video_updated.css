@@ -1,166 +1,203 @@
 ```css
 /* =========================================
-   CLICKABLE IMAGES
+   GENERAL SETTINGS
 ========================================= */
 
-.clickable-image {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-.clickable-image:hover {
-    transform: scale(1.04);
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f5f7fb;
+    color: #222;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 
 /* =========================================
-   HOBBY IMAGES
+   HEADER / NAVIGATION
 ========================================= */
 
-.hobby-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
-}
-
-
-/* =========================================
-   FAMILY IMAGES
-========================================= */
-
-.family-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin-bottom: 15px;
-}
-
-
-/* =========================================
-   HOBBY DETAILS
-========================================= */
-
-.hobby-details {
-    padding: 80px 8%;
-    text-align: center;
-}
-
-.details-box {
-    max-width: 800px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 20px;
-}
-
-.details-image {
-    width: 100%;
-    max-width: 600px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-    margin-bottom: 25px;
-}
-
-
-/* =========================================
-   BUTTONS
-========================================= */
-
-.hobby-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-/* =========================================
-   LARGE IMAGE POPUP
-========================================= */
-
-.image-modal {
-    display: none;
-
+header {
     position: fixed;
-    z-index: 9999;
-
-    left: 0;
     top: 0;
+    left: 0;
 
     width: 100%;
-    height: 100%;
 
-    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 8%;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+
+    color: #111;
+
+    text-decoration: none;
+}
+
+.logo span {
+    color: #e31b23;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e31b23;
+}
+
+
+/* =========================================
+   HOME / HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
     justify-content: center;
     align-items: center;
 
-    padding: 20px;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #e8f0ff,
+        #ffffff
+    );
+
+    padding-top: 130px;
 }
 
-
-/* Large image */
-
-.image-modal img {
-    max-width: 90%;
-    max-height: 90%;
-
-    object-fit: contain;
-
-    border-radius: 15px;
-
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+.hero-content {
+    max-width: 800px;
 }
 
+.profile-pic {
+    width: 190px;
+    height: 190px;
 
-/* Close X */
+    object-fit: cover;
 
-.close-button {
-    position: absolute;
+    border-radius: 50%;
 
-    top: 20px;
-    right: 35px;
+    margin: 0 auto 25px;
 
+    border: 6px solid #e31b23;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
     font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #e31b23;
+}
+
+.hero h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: #e31b23;
 
     color: white;
 
-    cursor: pointer;
+    text-decoration: none;
+
+    border-radius: 30px;
 
     font-weight: bold;
 
-    z-index: 10000;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b80008;
+
+    transform: translateY(-3px);
 }
 
 
-/* Mobile phones */
+/* =========================================
+   SECTION HEADINGS
+========================================= */
 
-@media (max-width: 600px) {
+.heading {
+    text-align: center;
 
-    .image-modal img {
-        max-width: 95%;
-        max-height: 80%;
-    }
+    font-size: 38px;
 
-    .close-button {
-        right: 20px;
-        top: 10px;
-        font-size: 40px;
-    }
-
-    .hobby-image,
-    .family-image {
-        height: 160px;
-    }
-
-    .details-image {
-        height: 250px;
-    }
-
+    margin-bottom: 40px;
 }
+
+.heading span {
+    color: #e31b23;
+}
+
+.section-intro {
+    text-align: center;
+
+    max-
 ```
