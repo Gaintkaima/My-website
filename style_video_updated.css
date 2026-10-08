@@ -1,0 +1,166 @@
+```css
+/* =========================================
+   CLICKABLE IMAGES
+========================================= */
+
+.clickable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clickable-image:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   HOBBY IMAGES
+========================================= */
+
+.hobby-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   FAMILY IMAGES
+========================================= */
+
+.family-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   HOBBY DETAILS
+========================================= */
+
+.hobby-details {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.details-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.details-image {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hobby-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   LARGE IMAGE POPUP
+========================================= */
+
+.image-modal {
+    display: none;
+
+    position: fixed;
+    z-index: 9999;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Large image */
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+
+    object-fit: contain;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+
+/* Close X */
+
+.close-button {
+    position: absolute;
+
+    top: 20px;
+    right: 35px;
+
+    font-size: 50px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    z-index: 10000;
+}
+
+
+/* Mobile phones */
+
+@media (max-width: 600px) {
+
+    .image-modal img {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    .close-button {
+        right: 20px;
+        top: 10px;
+        font-size: 40px;
+    }
+
+    .hobby-image,
+    .family-image {
+        height: 160px;
+    }
+
+    .details-image {
+        height: 250px;
+    }
+
+}
+```
